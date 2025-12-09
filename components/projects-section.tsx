@@ -1,72 +1,117 @@
-"use client"
+"use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ExternalLink, Github } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Github } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const PROJECTS = [
   {
     id: 1,
-    title: "IoT Smart Home Hub",
+    title: "AI-Assisted Brain Computer Interface for EEG-to-Text Communication",
     description:
-      "A central control system for IoT devices using ESP32 and custom PCB design. Manages lighting, temperature, and security systems.",
-    technologies: ["ESP32", "Arduino", "PCB Design", "MQTT", "Python"],
-    image: "/smart-home-iot-hub-circuit-board.jpg",
+      "A real-time BCI system using the Neurosity Crown headset to translate multi-channel EEG signals into text commands through artifact removal, filtering, FFT feature extraction, and classification with optimized KNN and Random Forest models. Features a TypeScript React dashboard built with Vite to display outputs like Yes, No, Help, and Water, integrating signal processing, machine learning, and frontend development for non-invasive communication.",
+    technologies: [
+      "Neurosity Crown",
+      "EEG",
+      "FFT",
+      "KNN",
+      "Random Forest",
+      "TypeScript",
+      "Vite",
+      "React",
+      "JavaScript",
+    ],
+    image: "/eeg-bci-interface-dashboard.jpg",
     github: "#",
     demo: "#",
   },
   {
     id: 2,
-    title: "Robotic Arm Controller",
+    title: "Air Quality Monitoring System",
     description:
-      "FPGA-based motion controller for a 6-DOF robotic arm with real-time servo control and inverse kinematics.",
-    technologies: ["FPGA", "Verilog", "ARM Cortex", "Real-time OS", "CAD"],
-    image: "/robotic-arm-fpga-controller.jpg",
+      "A real-time system utilizing the MQ-135 gas sensor and Arduino Uno to measure environmental pollutants, compute the Air Quality Index (AQI), and deliver visual LED alerts and auditory buzzer warnings when thresholds are exceeded, demonstrating skills in sensor integration, data acquisition, and automated monitoring.",
+    technologies: [
+      "MQ-135",
+      "Arduino Uno",
+      "LED Display",
+      "Buzzer",
+      "AQI Calculation",
+    ],
+    image: "/air-quality-monitoring-system.jpg",
     github: "#",
     demo: "#",
   },
   {
     id: 3,
-    title: "Signal Processing Platform",
+    title: "Line Following Robot Using L293D",
     description:
-      "High-speed signal acquisition and processing system using ADC, DSP algorithms, and ARM microcontroller for audio analysis.",
-    technologies: ["ARM Cortex-M4", "ADC", "DSP", "C/C++", "MATLAB"],
-    image: "/signal-processing-oscilloscope-display.jpg",
+      "Designed and built a line-following robot incorporating the L293D motor driver, BO motors, IR proximity sensors, and a custom Vero board circuit, with precise motor control, 9V power supply, modular pin headers, optimized wiring, stable wheels, and a manual switch for operation, showcasing skills in embedded design, component integration, and sensor-driven robotic control.",
+    technologies: [
+      "L293D",
+      "BO Motors",
+      "IR Proximity Sensors",
+      "Vero Board",
+      "Embedded Circuit Design",
+    ],
+    image: "/line-following-robot.jpeg",
     github: "#",
     demo: "#",
   },
   {
     id: 4,
-    title: "Wireless Power Monitoring",
+    title: "Real-Time Data Logging System Using ESP32",
     description:
-      "IoT-enabled power meter using LoRaWAN for remote monitoring. Features custom power analysis circuitry and cloud integration.",
-    technologies: ["LoRaWAN", "Arduino", "Cloud API", "PCB Design", "Power Electronics"],
-    image: "/power-meter-wireless-sensor-network.jpg",
+      "Designed and implemented a system with ESP32 to capture analog and digital sensor inputs, logging data to Google Sheets every 10 seconds, incorporating circuit design and API integration for automated acquisition and remote monitoring.",
+    technologies: [
+      "ESP32",
+      "Google Sheets",
+      "API",
+      "Sensor Inputs",
+      "Circuit Design",
+    ],
+    image: "/real-time-data-logging-system.jpg",
     github: "#",
     demo: "#",
   },
   {
     id: 5,
-    title: "FPGA Neural Network Accelerator",
+    title: "Image Enhancement Using Interpolation Techniques",
     description:
-      "Optimized FPGA implementation of neural networks for edge AI inference with custom HLS design for low latency.",
-    technologies: ["FPGA", "HLS", "Machine Learning", "Vivado", "Python"],
-    image: "/fpga-neural-network-ai-accelerator-board.jpg",
+      "A project applying interpolation methods to boost image quality and resolution, enhancing visual fidelity by filling pixel gaps with strategic techniques while preserving original features.",
+    technologies: ["Interpolation Techniques", "Image Processing"],
+    image: "/image-enhancement-interpolation.png",
     github: "#",
     demo: "#",
   },
   {
     id: 6,
-    title: "Battery Management System",
+    title: "Smart Home Automation System Using ESP8266 & ESP32",
     description:
-      "Comprehensive BMS design with cell balancing, temperature monitoring, and safety protection circuits for lithium batteries.",
-    technologies: ["BMS IC", "Balancing Circuits", "Thermistor", "CAN Bus", "Altium"],
-    image: "/battery-management-system-pcb-design.jpg",
+      "Designed and implemented a comprehensive smart home system with ESP32 as the central controller and ESP8266 modules for specific devices, enabling Wi-Fi-based automation and remote control of lighting, heating, security, and door locks.",
+    technologies: [
+      "ESP8266",
+      "ESP32",
+      "Wi-Fi Communication",
+      "Smart Home Automation",
+    ],
+    image: "/smart-home-automation-system.png",
     github: "#",
     demo: "#",
   },
-]
+];
 
 export function ProjectsSection() {
   return (
@@ -75,10 +120,13 @@ export function ProjectsSection() {
         <div className="space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
           {/* Section Header */}
           <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold">Featured Projects</h2>
+            <h2 className="text-4xl md:text-5xl font-bold">
+              Featured Projects
+            </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
             <p className="text-foreground/70 text-lg max-w-2xl">
-              A collection of my recent work in electronics design, embedded systems, and hardware development.
+              A collection of my recent work in electronics design, embedded
+              systems, and hardware development.
             </p>
           </div>
 
@@ -102,7 +150,20 @@ export function ProjectsSection() {
                 {/* Card Content */}
                 <CardHeader>
                   <CardTitle className="text-xl">{project.title}</CardTitle>
-                  <CardDescription className="text-foreground/70 line-clamp-2">{project.description}</CardDescription>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <div>
+                          <CardDescription className="text-foreground/70 line-clamp-2">
+                            {project.description}
+                          </CardDescription>
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent className="max-w-sm">
+                        <p className="text-sm">{project.description}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 </CardHeader>
 
                 <CardContent className="flex-grow space-y-4">
@@ -120,7 +181,7 @@ export function ProjectsSection() {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-2 pt-4">
+                  {/* <div className="flex gap-2 pt-4">
                     <Button size="sm" variant="outline" className="flex-1 gap-2 bg-transparent" asChild>
                       <a href={project.github}>
                         <Github size={16} />
@@ -133,7 +194,7 @@ export function ProjectsSection() {
                         Demo
                       </a>
                     </Button>
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
             ))}
@@ -141,5 +202,5 @@ export function ProjectsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

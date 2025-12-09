@@ -26,11 +26,11 @@ export function HeroSection() {
               <h1 className="text-5xl md:text-6xl font-bold text-balance leading-tight">
                 Hi, I'm{" "}
                 <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Mehak Sattar
+                  Mehak
                 </span>
               </h1>
               <p className="text-2xl text-muted-foreground">
-                Electronics Engineer
+                Industrial Electronics Engineer
               </p>
             </div>
 
@@ -58,12 +58,12 @@ export function HeroSection() {
 
             {/* Social Links */}
             <div className="flex gap-4 pt-4">
-              <a
+              {/* <a
                 href="#"
                 className="p-2 rounded-lg border border-border hover:bg-card transition-colors"
               >
                 <Github size={20} />
-              </a>
+              </a> */}
               <Link
                 href="https://www.linkedin.com/in/mehak-sattar"
                 target="_blank"
@@ -79,7 +79,7 @@ export function HeroSection() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-3xl opacity-20"></div>
               <img
-                src="/electronics-engineer-at-workbench-with-circuit-boa.jpg"
+                src="/mehak.jpeg"
                 alt="Electronics Engineer"
                 className="relative rounded-2xl border border-border w-full"
               />
