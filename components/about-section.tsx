@@ -1,41 +1,42 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Download } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 const MILESTONES = [
   {
-    year: "2020",
-    title: "Bachelor of Science - Electronics Engineering",
-    description: "Graduated from Tech University with honors. Focused on embedded systems and signal processing.",
+    year: "10 Dec 2022 – 5 Nov 2024 ",
+    title: "Founder & Secretary General, IIEE Student Council",
+    description:
+      "During my tenure as the Founder & Secretary General of the IIEE Student Council, I actively contributed to the council's establishment and helped shape its initial framework, vision, and activities.",
   },
   {
-    year: "2021",
-    title: "Junior Electronics Engineer",
-    description: "Joined TechCorp as an embedded systems engineer. Designed and tested IoT device prototypes.",
+    year: "5 Jun 2023 – 10 Jun 2025",
+    title: "Founder and Chairperson, WIE IEEE IIEE Student Branch",
+    description:
+      "As the Founder and Chairperson of the WIE IEEE IIEE Student Branch, I revitalized the IEEE presence on campus by identifying the necessity for a Women in Engineering (WIE) affinity group—mirroring those in other universities—proposing its formation, and launching introductory events to foster awareness and momentum. In my role, I directed over 20 successful events in partnership with established WIE branches across Pakistan, featuring key initiatives such as 'The LinkedIn Marathon,' 'Mental Health Day,' 'Pink Pride,' a LinkedIn Optimization seminar, and community service projects, thereby cultivating a supportive, empowering, and growth-oriented community for women engineers at IIEE.",
   },
   {
-    year: "2022",
-    title: "Senior Electronics Engineer",
-    description: "Promoted to lead role. Led cross-functional team in developing custom hardware solutions.",
+    year: "10 Jan 2025 – 20 Oct 2025",
+    title: "Marketing Head, Office of Innovation and Entrepreneurship (OIE), IIEE",
+    description:
+      "As Marketing Head at OIE, I represented the organization at various workshops, business conferences, and entrepreneurship events, including SIMERGE 2025 at KSBL, while addressing the prior lack of entrepreneurial engagement on campus by proposing and organizing programs focused on innovation, startup culture, and leadership development. This strategic effort helped build a robust entrepreneurial ecosystem at IIEE through effective planning, execution, and student involvement. Additionally, I spearheaded the flagship event 'Vision to Venture,' featuring interactive activities like case study challenges, business chart-making, simulations, and a pitch competition, fostering hands-on skills in problem-solving, decision-making, and creative business ideation to promote innovation, teamwork, and practical learning among participants.",
   },
-  {
-    year: "2023",
-    title: "Principal Hardware Architect",
-    description: "Architected next-generation FPGA-based systems and established PCB design standards.",
-  },
-]
+];
 
 const SKILLS_SUMMARY = [
-  "Embedded Systems Design",
-  "PCB Layout & Design",
-  "Hardware Prototyping",
-  "FPGA Development",
-  "Signal Processing",
-  "IoT Solutions",
-  "Circuit Analysis",
+  "MATLAB & Simulink",
+  "LabVIEW",
+  "WinCC",
+  "Siemens Simatic Manager",
+  "AVR Programming",
+  "FPGA Design",
+  "Code::Blocks / Code Studio",
+  "Visual Studio Code",
+  "Proteus",
+  "AutoCAD",
   "Test & Verification",
-]
+];
 
 export function AboutSection() {
   return (
@@ -51,18 +52,20 @@ export function AboutSection() {
           {/* Bio */}
           <div className="text-lg text-foreground/80 leading-relaxed space-y-4 max-w-3xl">
             <p>
-              I'm a passionate electronics engineer with 4+ years of experience designing and implementing complex
-              hardware systems. My expertise spans from PCB design and embedded systems to FPGA development and IoT
-              solutions.
+              I'm a passionate electronics engineer with 4+ years of experience
+              designing and implementing complex hardware systems. My expertise
+              spans from PCB design and embedded systems to FPGA development and
+              IoT solutions.
             </p>
             <p>
-              My journey in electronics began in university where I discovered my love for circuit design and hardware
-              prototyping. Since then, I've worked on diverse projects ranging from IoT smart home devices to advanced
-              signal processing systems.
+              Results-driven Industrial Electronics Engineer with experience in
+              smart systems, automation, and embedded solutions.
             </p>
             <p>
-              I'm committed to staying at the forefront of technology, continuously learning about emerging platforms
-              like edge computing, advanced microcontrollers, and cutting-edge FPGA architectures.
+              Committed to delivering efficient, innovative, and user-focused
+              engineering solutions that enhance system performance, support
+              organizational growth, and drive impactful technological
+              advancements.
             </p>
           </div>
 
@@ -74,12 +77,20 @@ export function AboutSection() {
                 <div key={index} className="flex gap-4">
                   <div className="flex flex-col items-center">
                     <div className="w-4 h-4 rounded-full bg-primary mt-1.5"></div>
-                    {index !== MILESTONES.length - 1 && <div className="w-0.5 h-16 bg-border mt-2"></div>}
+                    {index !== MILESTONES.length - 1 && (
+                      <div className="w-0.5 h-16 bg-border mt-2"></div>
+                    )}
                   </div>
                   <div className="pb-4">
-                    <p className="text-sm font-semibold text-primary">{milestone.year}</p>
-                    <h4 className="text-lg font-semibold text-foreground">{milestone.title}</h4>
-                    <p className="text-foreground/70">{milestone.description}</p>
+                    <p className="text-sm font-semibold text-primary">
+                      {milestone.year}
+                    </p>
+                    <h4 className="text-lg font-semibold text-foreground">
+                      {milestone.title}
+                    </h4>
+                    <p className="text-foreground/70">
+                      {milestone.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -103,13 +114,15 @@ export function AboutSection() {
 
           {/* Resume Download */}
           <div>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 gap-2">
-              <Download size={20} />
-              Download Resume
-            </Button>
+            <a href="/Mehak Europaas Cv.pdf" download="Mehak Europaas Cv.pdf">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 gap-2">
+                <Download size={20} />
+                Download Resume
+              </Button>
+            </a>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

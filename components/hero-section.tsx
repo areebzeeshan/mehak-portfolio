@@ -1,53 +1,76 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { ArrowDown, Github, Linkedin } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { ArrowDown, Github, Linkedin } from "lucide-react";
+import Link from "next/link";
 
 export function HeroSection() {
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    element?.scrollIntoView({ behavior: "smooth" })
-  }
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center pt-16 px-4"
+    >
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Side - Content */}
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="space-y-2">
-              <p className="text-primary font-semibold">Welcome to my portfolio</p>
+              <p className="text-primary font-semibold">
+                Welcome to my portfolio
+              </p>
               <h1 className="text-5xl md:text-6xl font-bold text-balance leading-tight">
                 Hi, I'm{" "}
                 <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Mehak Sattar 
+                  Mehak Sattar
                 </span>
               </h1>
-              <p className="text-2xl text-muted-foreground">Electronics Engineer</p>
+              <p className="text-2xl text-muted-foreground">
+                Electronics Engineer
+              </p>
             </div>
 
             <p className="text-lg text-foreground/80 leading-relaxed max-w-lg">
-              Innovating circuits and systems for the future. Specializing in embedded systems, PCB design, and hardware
-              prototyping.
+              Innovating circuits and systems for the future. Specializing in
+              embedded systems, PCB design, and hardware prototyping.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={() => scrollToSection("projects")}>
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90"
+                onClick={() => scrollToSection("projects")}
+              >
                 View My Projects
               </Button>
-              <Button size="lg" variant="outline" onClick={() => scrollToSection("contact")}>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => scrollToSection("contact")}
+              >
                 Get in Touch
               </Button>
             </div>
 
             {/* Social Links */}
             <div className="flex gap-4 pt-4">
-              <a href="#" className="p-2 rounded-lg border border-border hover:bg-card transition-colors">
+              <a
+                href="#"
+                className="p-2 rounded-lg border border-border hover:bg-card transition-colors"
+              >
                 <Github size={20} />
               </a>
-              <a href="#" className="p-2 rounded-lg border border-border hover:bg-card transition-colors">
+              <Link
+                href="https://www.linkedin.com/in/mehak-sattar"
+                target="_blank"
+                className="p-2 rounded-lg border border-border hover:bg-card transition-colors"
+              >
                 <Linkedin size={20} />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -75,5 +98,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
