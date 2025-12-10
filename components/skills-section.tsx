@@ -28,9 +28,8 @@ const SKILL_CATEGORIES = [
     icon: Code,
     title: "Programming",
     skills: [
-      { name: "C/C++", level: 93 },
+      { name: "C/C++", level: 85 },
       { name: "Python", level: 90 },
-      { name: "Verilog/VHDL", level: 87 },
       { name: "Assembly", level: 82 },
     ],
   },
@@ -38,10 +37,10 @@ const SKILL_CATEGORIES = [
     icon: Wrench,
     title: "Tools & Software",
     skills: [
-      { name: "Altium Designer", level: 92 },
+      { name: "Visual Studio Code", level: 92 },
       { name: "MATLAB/Simulink", level: 88 },
-      { name: "Vivado/ISE", level: 85 },
-      { name: "SPICE Simulation", level: 83 },
+      { name: "AutoCad", level: 85 },
+      { name: "Proteus", level: 83 },
     ],
   },
   {

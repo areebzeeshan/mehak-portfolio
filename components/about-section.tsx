@@ -11,16 +11,22 @@ const MILESTONES = [
       "During my tenure as the Founder & Secretary General of the IIEE Student Council, I actively contributed to the council's establishment and helped shape its initial framework, vision, and activities.",
   },
   {
-    year: "5 Jun 2023 – 10 Jun 2025",
-    title: "Founder and Chairperson, WIE IEEE IIEE Student Branch",
+    year: "14 Oct 2024 – 8 Nov 2024",
+    title: "Electronics Intern at Pakistan Airport Security",
     description:
-      "As the Founder and Chairperson of the WIE IEEE IIEE Student Branch, I revitalized the IEEE presence on campus by identifying the necessity for a Women in Engineering (WIE) affinity group—mirroring those in other universities—proposing its formation, and launching introductory events to foster awareness and momentum. In my role, I directed over 20 successful events in partnership with established WIE branches across Pakistan, featuring key initiatives such as 'The LinkedIn Marathon,' 'Mental Health Day,' 'Pink Pride,' a LinkedIn Optimization seminar, and community service projects, thereby cultivating a supportive, empowering, and growth-oriented community for women engineers at IIEE.",
+      "Monitored critical aviation systems including radar, communication networks and navigational aids Assisted in maintenance activities across ECR, ACC, and Radar TR departments. Conducted research on FDPS, ATMS, VCCS, ADS-B and radar surveillance systems.",
   },
   {
-    year: "10 Jan 2025 – 20 Oct 2025",
-    title: "Marketing Head, Office of Innovation and Entrepreneurship (OIE), IIEE",
+    year: "1 Oct 2024 – 26 Oct 2024",
+    title: "Electronics Intern at Fami Engineering",
     description:
-      "As Marketing Head at OIE, I represented the organization at various workshops, business conferences, and entrepreneurship events, including SIMERGE 2025 at KSBL, while addressing the prior lack of entrepreneurial engagement on campus by proposing and organizing programs focused on innovation, startup culture, and leadership development. This strategic effort helped build a robust entrepreneurial ecosystem at IIEE through effective planning, execution, and student involvement. Additionally, I spearheaded the flagship event 'Vision to Venture,' featuring interactive activities like case study challenges, business chart-making, simulations, and a pitch competition, fostering hands-on skills in problem-solving, decision-making, and creative business ideation to promote innovation, teamwork, and practical learning among participants.",
+      "Explored and compared competitive industrial solutions across multiple platforms. Evaluated products and services from various companies to understand market positioning, marketing strategies, and industry trends. Developed technical content and documentation related to electronic systems.",
+  },
+  {
+    year: "23 Sep 2023 – 20 Oct 2023",
+    title: "Instrumentation engineer at Automation Play",
+    description:
+      "Gained in-depth understanding of PLC and HMI architectures, programming concepts and their integration in automation systems. Developed foundational skills in SCADA development, including system structure and supervisory control functions.",
   },
 ];
 
@@ -115,7 +121,10 @@ export function AboutSection() {
           {/* Resume Download */}
           <div>
             <a href="/Mehak Europaas Cv.pdf" download="Mehak Europaas Cv.pdf">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 gap-2">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 gap-2"
+              >
                 <Download size={20} />
                 Download Resume
               </Button>

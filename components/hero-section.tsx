@@ -35,8 +35,10 @@ export function HeroSection() {
             </div>
 
             <p className="text-lg text-foreground/80 leading-relaxed max-w-lg">
-              Innovating circuits and systems for the future. Specializing in
-              embedded systems, PCB design, and hardware prototyping.
+              Results-driven Industrial Electronics Engineer with technical
+              experience in control systems, automation, and embedded
+              technologies, dedicated to building reliable, efficient, and
+              industry-focused solutions.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
@@ -57,13 +59,13 @@ export function HeroSection() {
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-4 pt-4">
-              {/* <a
+            {/* <div className="flex gap-4 pt-4">
+              <a
                 href="#"
                 className="p-2 rounded-lg border border-border hover:bg-card transition-colors"
               >
                 <Github size={20} />
-              </a> */}
+              </a>
               <Link
                 href="https://www.linkedin.com/in/mehak-sattar"
                 target="_blank"
@@ -71,7 +73,7 @@ export function HeroSection() {
               >
                 <Linkedin size={20} />
               </Link>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Side - Profile Image */}

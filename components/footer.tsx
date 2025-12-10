@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
-import { Github, Linkedin, Twitter, Mail, Heart, ArrowUp } from "lucide-react"
+import { Github, Linkedin, Twitter, Mail, Heart, ArrowUp } from "lucide-react";
+import Link from "next/link";
 
 const FOOTER_LINKS = [
   { label: "Home", href: "#home" },
@@ -9,21 +10,29 @@ const FOOTER_LINKS = [
   { label: "Skills", href: "#skills" },
   { label: "Blog", href: "#blog" },
   { label: "Contact", href: "#contact" },
-]
+];
 
 const SOCIAL_LINKS = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Mail, href: "mailto:alex@example.com", label: "Email" },
-]
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/mehak-sattar",
+    label: "LinkedIn",
+    isExternal: true,
+  },
+  {
+    icon: Mail,
+    href: "mailto:mehak.sattar.work@gmail.com",
+    label: "Email",
+    isExternal: false,
+  },
+];
 
 export function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="border-t border-border bg-background/50 backdrop-blur">
@@ -32,10 +41,11 @@ export function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-2">
-              Alex Chen
+              Mehak Sattar
             </h3>
             <p className="text-foreground/70 text-sm">
-              Electronics Engineer specializing in embedded systems and hardware design.
+              Electronics Engineer specializing in embedded systems and Control
+              systems.
             </p>
           </div>
 
@@ -44,7 +54,11 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <div className="grid grid-cols-2 gap-2 text-sm">
               {FOOTER_LINKS.map((link) => (
-                <a key={link.href} href={link.href} className="text-foreground/70 hover:text-primary transition-colors">
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-foreground/70 hover:text-primary transition-colors"
+                >
                   {link.label}
                 </a>
               ))}
@@ -54,41 +68,43 @@ export function Footer() {
           {/* Social */}
           <div>
             <h4 className="font-semibold mb-4">Connect</h4>
-            <div className="flex gap-3">
-              {SOCIAL_LINKS.map((link) => {
-                const Icon = link.icon
-                return (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    aria-label={link.label}
-                    className="p-2 rounded-lg border border-border hover:bg-primary hover:border-primary hover:text-background transition-all"
-                  >
-                    <Icon size={18} />
-                  </a>
-                )
-              })}
+            {/* Social Links */}
+            <div className="">
+              <div className="flex flex-wrap gap-2">
+                {SOCIAL_LINKS.map((link, index) => {
+                  const Icon = link.icon;
+                  return (
+                    <Link
+                      key={index}
+                      href={link.href}
+                      aria-label={link.label}
+                      target={link.isExternal ? "_blank" : "_self"}
+                      rel={link.isExternal ? "noopener noreferrer" : undefined}
+                      className="p-3 rounded-lg border border-border hover:bg-primary hover:border-primary hover:text-background transition-all"
+                    >
+                      <Icon size={20} />
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="border-t border-border py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Copyright */}
-          <p className="text-sm text-foreground/60 flex items-center gap-1">
-            Made with <Heart size={16} className="text-primary" /> by Alex Chen © {currentYear}
-          </p>
-
-          {/* Scroll to Top */}
-          <button
-            onClick={scrollToTop}
-            className="p-2 rounded-lg border border-border hover:bg-card hover:border-primary transition-all"
-            aria-label="Scroll to top"
-          >
-            <ArrowUp size={18} />
-          </button>
+        <div className="border-t border-border py-8">
+          {/* Scroll to Top - Right Aligned */}
+          <div className="flex justify-end">
+            <button
+              onClick={scrollToTop}
+              className="p-2 rounded-lg border border-border hover:bg-card hover:border-primary transition-all"
+              aria-label="Scroll to top"
+            >
+              <ArrowUp size={18} />
+            </button>
+          </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
