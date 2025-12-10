@@ -45,7 +45,7 @@ export function Navigation() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a
-              href="#home"
+              href="/"
               className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
             >
               Mehak Sattar 

@@ -128,3 +128,86 @@ export const PROJECTS = [
     demo: "#",
   },
 ];
+
+export const LAB_WORKS = [
+  {
+    id: 1,
+    title: "Artificial Intelligence Labs",
+    filePath: "/lab-works/ai-labs.pdf",
+  },
+  {
+    id: 2,
+    title: "Digital Control System",
+    filePath: "/lab-works/Digital Control System.pdf",
+  },
+  {
+    id: 3,
+    title: "High Order System",
+    filePath: "/lab-works/High Order System.pdf",
+  },
+  {
+    id: 4,
+    title: "IIOT Smart Home Automation",
+    filePath: "/lab-works/IIOT Smart Home Automation.pdf",
+  },
+  {
+    id: 5,
+    title: "Interfacing of Sensor and Transducers",
+    filePath: "/lab-works/Interfacing of Sensor and Transducers.pdf",
+  },
+  {
+    id: 6,
+    title: "Interpolation",
+    filePath: "/lab-works/Interpolation.pdf",
+  },
+  {
+    id: 7,
+    title: "Line Following Robot",
+    filePath: "/lab-works/Line Following Robot.pdf",
+  },
+  {
+    id: 8,
+    title: "Logic to drive the stepper motor",
+    filePath: "/lab-works/Logic to drive the stepper motor.pdf",
+  },
+  {
+    id: 9,
+    title: "PAM modulator",
+    filePath: "/lab-works/PAM modulator.pdf",
+  },
+  {
+    id: 10,
+    title: "Parts sorting mechanism",
+    filePath: "/lab-works/Parts sorting mechanism.pdf",
+  },
+  {
+    id: 11,
+    title: "Power Converters",
+    filePath: "/lab-works/Power Convertors.pdf",
+  },
+  {
+    id: 12,
+    title: "Proportional-Integral-Derivative",
+    filePath: "/lab-works/Proportional-Integral-Derivative.pdf",
+  },
+  {
+    id: 13,
+    title: "Steady State Error",
+    filePath: "/lab-works/Steady State Error.pdf",
+  },
+  {
+    id: 14,
+    title: "Tablet filling station using Statement List",
+    filePath: "/lab-works/Tablet filling station using Statement List.pdf",
+  },
+  {
+    id: 15,
+    title: "Traffic Control System",
+    filePath: "/lab-works/Traffic Control System.pdf",
+  },
+  {
+    id: 16,
+    title: "Waste Water Pump System",
+    filePath: "/lab-works/Waste Water Pump System.pdf",
+  },
+];
