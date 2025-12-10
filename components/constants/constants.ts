@@ -1,23 +1,4 @@
-"use client";
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
-const PROJECTS = [
+export const PROJECTS = [
   {
     id: 1,
     title: "AI-Assisted Brain Computer Interface for EEG-to-Text Communication",
@@ -111,80 +92,39 @@ const PROJECTS = [
     github: "#",
     demo: "#",
   },
+  {
+    id: 7,
+    title: "Design of a Controller for Third- or Higher-Order Systems",
+    description:
+      "Designed and implemented controllers for third- and higher-order dynamic systems, emphasizing stability, transient response optimization, and meeting performance specifications through classical and modern control techniques.",
+    technologies: [
+      "Control Systems",
+      "Stability Analysis",
+      "Transient Response Optimization",
+      "Classical Control",
+      "Modern Control",
+    ],
+    image: "/controller-design-systems.png",
+    github: "#",
+    demo: "#",
+  },
+  {
+    id: 8,
+    title: "Paper Weight Fabrication Project",
+    description:
+      "Fabricated a paper weight from a raw material rod, showcasing engineering workshop skills in precision machining through processes like cutting, filing, reaming, threading, drilling, lathe shaping and finishing, and engraving for detailed markings and polish, emphasizing material selection, manual and machine-based techniques, and craftsmanship in creating a functional, refined product.",
+    technologies: [
+      "Lathe Machine",
+      "Engraving Machine",
+      "Cutting",
+      "Filing",
+      "Reaming",
+      "Threading",
+      "Drilling",
+      "Precision Machining",
+    ],
+    image: "/paper-weight-fabrication.jpg",
+    github: "#",
+    demo: "#",
+  },
 ];
-
-export function ProjectsSection() {
-  return (
-    <section id="projects" className="py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-          {/* Section Header */}
-          <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold">
-              Featured Projects
-            </h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
-            <p className="text-foreground/70 text-lg max-w-2xl">
-              A collection of my recent work in electronics design, embedded
-              systems, and hardware development.
-            </p>
-          </div>
-
-          {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {PROJECTS.map((project) => (
-              <Card
-                key={project.id}
-                className="border border-border hover:border-primary/50 transition-all duration-300 overflow-hidden group h-full flex flex-col"
-              >
-                {/* Project Image */}
-                <div className="relative overflow-hidden h-48 bg-card">
-                  <img
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-
-                {/* Card Content */}
-                <CardHeader>
-                  <CardTitle className="text-xl">{project.title}</CardTitle>
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <div>
-                          <CardDescription className="text-foreground/70 line-clamp-2">
-                            {project.description}
-                          </CardDescription>
-                        </div>
-                      </TooltipTrigger>
-                      <TooltipContent className="max-w-sm">
-                        <p className="text-sm">{project.description}</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </CardHeader>
-
-                <CardContent className="flex-grow space-y-4">
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, idx) => (
-                      <Badge
-                        key={idx}
-                        variant="secondary"
-                        className="bg-primary/20 text-primary hover:bg-primary/30 text-xs"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
