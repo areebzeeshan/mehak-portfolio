@@ -20,6 +20,12 @@ const SOCIAL_LINKS = [
     isExternal: true,
   },
   {
+    icon: Twitter,
+    href: "https://x.com/mehak_sattar_?s=11",
+    label: "Twitter",
+    isExternal: true,
+  },
+  {
     icon: Mail,
     href: "mailto:mehak.sattar.work@gmail.com",
     label: "Email",
