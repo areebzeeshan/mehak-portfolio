@@ -266,3 +266,66 @@ export const MANAGEMENT = [
       "As Founder and Chairperson, I revived IEEE's campus presence by identifying the need for a dedicated Women in Engineering (WIE) branch, proposing its establishment, and organizing introductory events for momentum and awareness. I led over 20 successful events in collaboration with WIE branches across Pakistan, highlighting 'The LinkedIn Marathon,' Mental Health Awareness Day, Pink Pride, LinkedIn Optimization seminar, and community initiatives, creating a supportive, empowering environment for women engineers at IIEE.",
   },
 ];
+
+export const CERTIFICATES = [
+  {
+    id: 1,
+    title: "Dawlance Certificate",
+    filePath: "/certificates/Dawlance certificate.pdf",
+  },
+  {
+    id: 2,
+    title: "Fami Engineering Mehak",
+    filePath: "/certificates/Fami.Engineering._Mehak.pdf",
+  },
+  {
+    id: 3,
+    title: "IEEE Lets Rise Again",
+    filePath: "/certificates/IEEE Lets Rise Again.pdf",
+  },
+  {
+    id: 4,
+    title: "Mental Health Day",
+    filePath: "/certificates/Mental Health Day.pdf",
+  },
+  {
+    id: 5,
+    title: "OIE IIEE",
+    filePath: "/certificates/OIE IIEE.pdf",
+  },
+  {
+    id: 6,
+    title: "Optimistic Future",
+    filePath: "/certificates/Optimistic Future.pdf",
+  },
+  {
+    id: 7,
+    title: "Pakistan Airport Authority",
+    filePath: "/certificates/Pakistan Airport Authority.pdf",
+  },
+  {
+    id: 8,
+    title: "Simerge 2025",
+    filePath: "/certificates/Simerge 2025.pdf",
+  },
+  {
+    id: 9,
+    title: "Student Council Certificates",
+    filePath: "/certificates/Student Council Certificates.pdf",
+  },
+  {
+    id: 10,
+    title: "Wasa Industrial Orientation",
+    filePath: "/certificates/Wasa Industrial Orientation.pdf",
+  },
+  {
+    id: 11,
+    title: "WIE-IEEE Certificates",
+    filePath: "/certificates/WIE-IEEE Certificates.pdf",
+  },
+  {
+    id: 12,
+    title: "Zindagi Trust",
+    filePath: "/certificates/Zindagi Trust.pdf",
+  },
+];

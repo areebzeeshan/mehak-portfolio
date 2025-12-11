@@ -1,22 +1,48 @@
 const references = [
   {
-    name: 'Engr. Dr. M. Sameer Ahmad',
-    title: 'Assistant Professor',
-    affiliation: 'Institute of Industrial Electronics Engineering (IIEE)',
-    contact: 'Phone: +92 300 1234567'
+    name: "Engr. Dr. M. Sameer Ahmad",
+    title: "Assistant Professor",
+    affiliation: "Institute of Industrial Electronics Engineering (IIEE)",
+    contact: "Phone: +92 300 1234567",
   },
   {
-    name: 'Dr. Ayesha Khan',
-    title: 'Professor & Head of Department',
-    affiliation: 'Department of Computer Science, NED University',
-    contact: 'akhan@neduet.edu.pk'
+    name: "Dr. Ayesha Khan",
+    title: "Professor & Head of Department",
+    affiliation: "Department of Computer Science, NED University",
+    contact: "akhan@neduet.edu.pk",
   },
   {
-    name: 'Prof. Ali Raza',
-    title: 'Associate Professor',
-    affiliation: 'Department of Electrical Engineering, NUST',
-    contact: 'Phone: +92 321 9876543'
-  }
+    name: "Prof. Ali Raza",
+    title: "Associate Professor",
+    affiliation: "Department of Electrical Engineering, NUST",
+    contact: "Phone: +92 321 9876543",
+  },
+  {
+    name: "Engr. Dr. Farah Haroon",
+    title: "Principal",
+    affiliation: "Institute of Industrial Electronics Engineering (IIEE)",
+    contact: "farah@iiee.edu.pk",
+  },
+  {
+    name: "Engr. Dr. Sajid Hussain",
+    title: "Assistant Professor",
+    affiliation: "Institute of Industrial Electronics Engineering (IIEE)",
+    contact: "Sajid@iiee.edu.pk",
+  },
+  {
+    name: "Engr. Dr. Syed Saeed Jaffer",
+    title:
+      "Assistant Professor / Focal person Office of Innovation and Entrepreneurship",
+    affiliation: "Institute of Industrial Electronics Engineering (IIEE)",
+    contact: "saeed.jaffer@iiee.edu.pk",
+  },
+  {
+    name: "Engr. Dr. M. Sameer Ahmad",
+    title:
+      "Assistant Professor / Incharge Industrial Liaison Office/Student Counselling Branch",
+    affiliation: "Institute of Industrial Electronics Engineering (IIEE)",
+    contact: "sameer@iiee.edu.pk",
+  },
 ];
 
 export default function ReferencesPage() {
@@ -26,8 +52,13 @@ export default function ReferencesPage() {
         <h1 className="text-4xl font-bold text-center mb-12">REFERENCES</h1>
         <div className="space-y-8">
           {references.map((ref, index) => (
-            <div key={index} className="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-cyan-400/20 transition-shadow">
-              <h2 className="text-2xl font-semibold text-cyan-300 mb-2">{ref.name}</h2>
+            <div
+              key={index}
+              className="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-cyan-400/20 transition-shadow"
+            >
+              <h2 className="text-2xl font-semibold text-cyan-300 mb-2">
+                {ref.name}
+              </h2>
               <p className="text-lg text-gray-300">{ref.title}</p>
               <p className="text-gray-400 mt-1">{ref.affiliation}</p>
               {ref.contact && (
