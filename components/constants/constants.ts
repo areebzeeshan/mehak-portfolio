@@ -211,3 +211,58 @@ export const LAB_WORKS = [
     filePath: "/lab-works/Waste Water Pump System.pdf",
   },
 ];
+
+export const PRESENTATIONS = [
+  {
+    id: 1,
+    title: "AI Assisted Headset",
+    filePath: "/presentations/AI Assisted Headset.pdf",
+  },
+  {
+    id: 2,
+    title: "AI-Assisted Headset Proposal",
+    filePath: "/presentations/AI-Assisted Headset Proposal.pdf",
+  },
+  {
+    id: 3,
+    title: "Best Industrial Solution",
+    filePath: "/presentations/Best Industrial Solution.pdf",
+  },
+  {
+    id: 4,
+    title: "Efficient Packaging and Waste reduction",
+    filePath: "/presentations/Efficient Packaging and Waste reduction.pdf",
+  },
+  {
+    id: 5,
+    title: "Innovative Industrial Computing Solutions",
+    filePath: "/presentations/Innovative Industrial Computing Solutions.pdf",
+  },
+  {
+    id: 6,
+    title: "Research",
+    filePath: "/presentations/Research.pdf",
+  },
+];
+
+export const MANAGEMENT = [
+  {
+    year: "10 Dec 2022 – 5 Nov 2024 ",
+    title: "Founder & Secretary General, IIEE Student Council",
+    description:
+      "During my tenure as the Founder & Secretary General of the IIEE Student Council, I actively contributed to the council's establishment and helped shape its initial framework, vision, and activities.",
+  },
+  {
+    year: "10 Jan 2025 – 20 Oct 2025",
+    title:
+      "Marketing Head, Office of Innovation and Entrepreneurship (OIE), IIEE",
+    description:
+      "As Marketing Head, I represented OIE at workshops, conferences, and events like SIMERGE 2025 at KSBL. I addressed the lack of entrepreneurial engagement by proposing and organizing programs on innovation, startups, and leadership, building a stronger ecosystem at IIEE through planning and execution. I led the flagship event 'Vision to Venture,' featuring case studies, business simulations, and pitch competitions to foster problem-solving, decision-making, and innovation among participants.",
+  },
+  {
+    year: "5 Jun 2023 – 10 Jun 2025",
+    title: "Founder and Chairperson, WIE IEEE IIEE Student Branch",
+    description:
+      "As Founder and Chairperson, I revived IEEE's campus presence by identifying the need for a dedicated Women in Engineering (WIE) branch, proposing its establishment, and organizing introductory events for momentum and awareness. I led over 20 successful events in collaboration with WIE branches across Pakistan, highlighting 'The LinkedIn Marathon,' Mental Health Awareness Day, Pink Pride, LinkedIn Optimization seminar, and community initiatives, creating a supportive, empowering environment for women engineers at IIEE.",
+  },
+];

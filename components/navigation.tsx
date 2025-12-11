@@ -25,6 +25,7 @@ const NAV_LINKS = [
 export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -97,20 +98,56 @@ export function Navigation() {
         </div>
 
         {/* Mobile Navigation */}
-        {mobileOpen && (
-          <div className="md:hidden pb-4 space-y-1">
+        <div 
+          className={`fixed top-16 left-0 right-0 bottom-0 bg-background/70 backdrop-blur-lg z-50 transform transition-all duration-300 ease-in-out overflow-y-auto border-r border-border/20 ${
+            mobileOpen ? 'translate-x-0' : '-translate-x-full'
+          } md:hidden`}
+        >
+
+          <div className="p-4 space-y-1">
             {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors"
-                onClick={() => setMobileOpen(false)}
-              >
-                {link.label}
-              </a>
+              <div key={link.href || link.label}>
+                {link.submenu ? (
+                  <div className="space-y-1">
+                    <button
+                      onClick={() => setOpenSubmenu(openSubmenu === link.label ? null : link.label)}
+                      className="w-full flex items-center justify-between px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors"
+                    >
+                      <span>{link.label}</span>
+                      <ChevronDown 
+                        className={`h-4 w-4 transition-transform duration-200 ${
+                          openSubmenu === link.label ? 'transform rotate-180' : ''
+                        }`} 
+                      />
+                    </button>
+                    {openSubmenu === link.label && (
+                      <div className="pl-6 space-y-1 mt-1">
+                        {link.submenu.map((item) => (
+                          <a
+                            key={item.href}
+                            href={item.href}
+                            className="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+                            onClick={() => setMobileOpen(false)}
+                          >
+                            {item.label}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <a
+                    href={link.href}
+                    className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                )}
+              </div>
             ))}
           </div>
-        )}
+        </div>
       </div>
     </nav>
   )

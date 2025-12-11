@@ -5,12 +5,6 @@ import { Download } from "lucide-react";
 
 const MILESTONES = [
   {
-    year: "10 Dec 2022 – 5 Nov 2024 ",
-    title: "Founder & Secretary General, IIEE Student Council",
-    description:
-      "During my tenure as the Founder & Secretary General of the IIEE Student Council, I actively contributed to the council's establishment and helped shape its initial framework, vision, and activities.",
-  },
-  {
     year: "14 Oct 2024 – 8 Nov 2024",
     title: "Electronics Intern at Pakistan Airport Security",
     description:
