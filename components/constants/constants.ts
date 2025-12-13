@@ -276,7 +276,7 @@ export const CERTIFICATES = [
   {
     id: 2,
     title: "Fami Engineering Mehak",
-    filePath: "/certificates/Fami.Engineering._Mehak.pdf",
+    filePath: "/certificates/Fami.Engineering_Mehak.pdf",
   },
   {
     id: 3,
