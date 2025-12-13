@@ -35,10 +35,9 @@ export function HeroSection() {
             </div>
 
             <p className="text-lg text-foreground/80 leading-relaxed max-w-lg">
-              Results-driven Industrial Electronics Engineer with technical
-              experience in control systems, automation, and embedded
-              technologies, dedicated to building reliable, efficient, and
-              industry-focused solutions.
+              Results-driven Industrial Electronics Engineer specializing in
+              automation, control systems and embedded technologies, dedicated
+              to creating reliable, efficient and innovative solutions.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
@@ -57,23 +56,6 @@ export function HeroSection() {
                 Get in Touch
               </Button>
             </div>
-
-            {/* Social Links */}
-            {/* <div className="flex gap-4 pt-4">
-              <a
-                href="#"
-                className="p-2 rounded-lg border border-border hover:bg-card transition-colors"
-              >
-                <Github size={20} />
-              </a>
-              <Link
-                href="https://www.linkedin.com/in/mehak-sattar"
-                target="_blank"
-                className="p-2 rounded-lg border border-border hover:bg-card transition-colors"
-              >
-                <Linkedin size={20} />
-              </Link>
-            </div> */}
           </div>
 
           {/* Right Side - Profile Image */}
@@ -83,7 +65,7 @@ export function HeroSection() {
               <img
                 src="/mehak.jpeg"
                 alt="Electronics Engineer"
-                className="relative rounded-2xl border border-border w-full"
+                className="relative rounded-2xl border border-border w-full max-w-[450px] max-h-[500px] object-cover mx-auto"
               />
             </div>
           </div>

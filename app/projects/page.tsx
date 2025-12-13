@@ -21,9 +21,9 @@ export default function ProjectsPage() {
     <div className="my-20 mx-8 md:mx-14 lg:mx-20">
       <h1 className="text-4xl font-bold mb-6">My Projects</h1>
       <p className="text-lg text-muted-foreground mb-8">
-        Here are some of the projects I've worked on. <br /> Each project has
-        helped me grow as a <b>Electronics Engineer</b> and taught me valuable
-        skills.
+        My recent engineering projects featuring AI-assisted BCI development,
+        electronics design, embedded systems, communication systems and signal &
+        systems applications
       </p>
       {/* Projects Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -1,44 +1,43 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { useState, useEffect } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { 
-    label: "My Work", 
+  {
+    label: "My Work",
     submenu: [
       { label: "Projects", href: "/projects" },
       { label: "Lab works", href: "/lab-works" },
       { label: "Presentations", href: "/presentations" },
-      { label: "References", href: "/references" },
-      { label: "Management", href: "/management" },
-      { label: "Certification & Awards", href: "/certifications" },
-    ]
+    ],
   },
-  { label: "About", href: "/about" },
-  { label: "Skills", href: "/skills" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
-]
+  { label: "About", href: "#about" },
+  { label: "References", href: "/references" },
+  { label: "Management", href: "/management" },
+  { label: "Certification & Awards", href: "/certifications" },
+];
 
 export function Navigation() {
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/95 backdrop-blur border-b border-border" : "bg-transparent"
+        scrolled
+          ? "bg-background/95 backdrop-blur border-b border-border"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,13 +48,13 @@ export function Navigation() {
               href="/"
               className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
             >
-              Mehak Sattar 
+              Mehak Sattar
             </a>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
-            {NAV_LINKS.map((link) => (
+            {NAV_LINKS.map((link) =>
               link.submenu ? (
                 <div key={link.label} className="relative group">
                   <button className="flex items-center px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
@@ -80,12 +79,12 @@ export function Navigation() {
                 <a
                   key={link.href}
                   href={link.href}
-                className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
-              >
-                {link.label}
-              </a>
+                  className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </a>
               )
-            ))}
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -98,26 +97,31 @@ export function Navigation() {
         </div>
 
         {/* Mobile Navigation */}
-        <div 
+        <div
           className={`fixed top-16 left-0 right-0 bottom-0 bg-background/70 backdrop-blur-lg z-50 transform transition-all duration-300 ease-in-out overflow-y-auto border-r border-border/20 ${
-            mobileOpen ? 'translate-x-0' : '-translate-x-full'
+            mobileOpen ? "translate-x-0" : "-translate-x-full"
           } md:hidden`}
         >
-
           <div className="p-4 space-y-1">
             {NAV_LINKS.map((link) => (
               <div key={link.href || link.label}>
                 {link.submenu ? (
                   <div className="space-y-1">
                     <button
-                      onClick={() => setOpenSubmenu(openSubmenu === link.label ? null : link.label)}
+                      onClick={() =>
+                        setOpenSubmenu(
+                          openSubmenu === link.label ? null : link.label
+                        )
+                      }
                       className="w-full flex items-center justify-between px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors"
                     >
                       <span>{link.label}</span>
-                      <ChevronDown 
+                      <ChevronDown
                         className={`h-4 w-4 transition-transform duration-200 ${
-                          openSubmenu === link.label ? 'transform rotate-180' : ''
-                        }`} 
+                          openSubmenu === link.label
+                            ? "transform rotate-180"
+                            : ""
+                        }`}
                       />
                     </button>
                     {openSubmenu === link.label && (
@@ -150,5 +154,5 @@ export function Navigation() {
         </div>
       </div>
     </nav>
-  )
+  );
 }

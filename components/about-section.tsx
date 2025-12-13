@@ -52,14 +52,16 @@ export function AboutSection() {
           {/* Bio */}
           <div className="text-lg text-foreground/80 leading-relaxed space-y-4 max-w-3xl">
             <p>
-              I'm a passionate electronics engineer with 4+ years of experience
-              designing and implementing complex hardware systems. My expertise
-              spans from PCB design and embedded systems to FPGA development and
-              IoT solutions.
+              I’m an Industrial Electronics Engineer passionate about
+              automation, smart systems, and creating practical engineering
+              solutions for real-world applications. My expertise includes
+              embedded technologies, IoT, FPGA-based development, PLC
+              programming, control systems and signal processing.
             </p>
             <p>
-              Results-driven Industrial Electronics Engineer with experience in
-              smart systems, automation, and embedded solutions.
+              I focus on designing reliable, efficient and user-centered systems
+              that enhance performance and deliver meaningful value. Turning
+              ideas into functional, impactful solutions is what drives my work.
             </p>
             <p>
               Committed to delivering efficient, innovative, and user-focused
