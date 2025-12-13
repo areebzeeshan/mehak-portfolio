@@ -18,7 +18,7 @@ const MILESTONES = [
   },
   {
     year: "23 Sep 2023 – 20 Oct 2023",
-    title: "Instrumentation engineer at Automation Play",
+    title: "Instrumentation intern engineer at Automation Play",
     description:
       "Gained in-depth understanding of PLC and HMI architectures, programming concepts and their integration in automation systems. Developed foundational skills in SCADA development, including system structure and supervisory control functions.",
   },
@@ -53,10 +53,10 @@ export function AboutSection() {
           <div className="text-lg text-foreground/80 leading-relaxed space-y-4 max-w-3xl">
             <p>
               I’m an Industrial Electronics Engineer passionate about
-              automation, smart systems, and creating practical engineering
+              automation, smart systems and creating practical engineering
               solutions for real-world applications. My expertise includes
-              embedded technologies, IoT, FPGA-based development, PLC
-              programming, control systems and signal processing.
+              embedded technologies, IoT, PLC programming, SCADA, HMI, control
+              systems and signal processing.
             </p>
             <p>
               I focus on designing reliable, efficient and user-centered systems

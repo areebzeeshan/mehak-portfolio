@@ -1,5 +1,11 @@
 const references = [
   {
+    name: "Engr. Dr. Farah Haroon",
+    title: "Principal",
+    affiliation: "Institute of Industrial Electronics Engineering (IIEE)",
+    contact: "farah@iiee.edu.pk",
+  },
+  {
     name: "Engr. Dr. M. Sameer Ahmad",
     title: "Assistant Professor",
     affiliation: "Institute of Industrial Electronics Engineering (IIEE)",
@@ -18,12 +24,6 @@ const references = [
     contact: "Phone: +92 321 9876543",
   },
   {
-    name: "Engr. Dr. Farah Haroon",
-    title: "Principal",
-    affiliation: "Institute of Industrial Electronics Engineering (IIEE)",
-    contact: "farah@iiee.edu.pk",
-  },
-  {
     name: "Engr. Dr. Sajid Hussain",
     title: "Assistant Professor",
     affiliation: "Institute of Industrial Electronics Engineering (IIEE)",
@@ -35,13 +35,6 @@ const references = [
       "Assistant Professor / Focal person Office of Innovation and Entrepreneurship",
     affiliation: "Institute of Industrial Electronics Engineering (IIEE)",
     contact: "saeed.jaffer@iiee.edu.pk",
-  },
-  {
-    name: "Engr. Dr. M. Sameer Ahmad",
-    title:
-      "Assistant Professor / Incharge Industrial Liaison Office/Student Counselling Branch",
-    affiliation: "Institute of Industrial Electronics Engineering (IIEE)",
-    contact: "sameer@iiee.edu.pk",
   },
 ];
 

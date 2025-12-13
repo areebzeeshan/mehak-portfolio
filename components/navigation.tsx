@@ -13,7 +13,6 @@ const NAV_LINKS = [
       { label: "Presentations", href: "/presentations" },
     ],
   },
-  { label: "About", href: "#about" },
   { label: "References", href: "/references" },
   { label: "Management", href: "/management" },
   { label: "Certification & Awards", href: "/certifications" },
