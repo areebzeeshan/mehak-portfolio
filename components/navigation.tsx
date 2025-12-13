@@ -13,9 +13,9 @@ const NAV_LINKS = [
       { label: "Presentations", href: "/presentations" },
     ],
   },
-  { label: "References", href: "/references" },
   { label: "Management", href: "/management" },
   { label: "Certification & Awards", href: "/certifications" },
+  { label: "References", href: "/references" },
 ];
 
 export function Navigation() {

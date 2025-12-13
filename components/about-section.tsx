@@ -18,7 +18,7 @@ const MILESTONES = [
   },
   {
     year: "23 Sep 2023 – 20 Oct 2023",
-    title: "Instrumentation intern engineer at Automation Play",
+    title: "Instrumentation Intern at Automation Play",
     description:
       "Gained in-depth understanding of PLC and HMI architectures, programming concepts and their integration in automation systems. Developed foundational skills in SCADA development, including system structure and supervisory control functions.",
   },
